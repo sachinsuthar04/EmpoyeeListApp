@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@color/colorPrimary"
+    android:elevation="@dimen/_5sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/_5sdp"
+        android:orientation="horizontal">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/ivthumb"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_70sdp"
+            android:layout_gravity="center"
+            android:src="@mipmap/ic_launcher"
+            app:placeholderImage="@mipmap/ic_launcher"
+            app:roundAsCircle="true" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/bggradient"
+            android:orientation="vertical">
+
+            <com.example.util.view.TextViewBold
+                android:id="@+id/empid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:fontFamily="sans-serif-black"
+                android:paddingLeft="16dp"
+                android:text="1"
+                android:textSize="@dimen/_16ssp"
+                android:textStyle="bold" />
+
+            <com.example.util.view.TextViewRegular
+                android:id="@+id/empname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:fontFamily="sans-serif-medium"
+                android:paddingLeft="16dp"
+                android:text="Name"
+                android:textSize="@dimen/_14ssp"
+                android:textStyle="bold" />
+
+            <com.example.util.view.TextViewRegular
+                android:id="@+id/empsalary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:fontFamily="sans-serif-medium"
+                android:paddingLeft="16dp"
+                android:text="1000"
+                android:textSize="@dimen/_14ssp"
+                android:textStyle="bold" />
+
+            <com.example.util.view.TextViewRegular
+                android:id="@+id/empage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:fontFamily="sans-serif-medium"
+                android:paddingLeft="16dp"
+                android:text="10"
+                android:textSize="@dimen/_14ssp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

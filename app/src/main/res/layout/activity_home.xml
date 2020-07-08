@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="data"
+            type="com.example.ui.viewmodels.EmployeeViewModel" />
+    </data>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/login_bg">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/row_item">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <com.example.util.view.TextViewBold
+            android:id="@+id/tvnorecord"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:visibility="gone"
+            android:text="No data found !"
+            android:textSize="@dimen/_30sdp" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="@dimen/_200sdp"
+            android:layout_centerInParent="true"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="loaders.json"
+            app:lottie_imageAssetsFolder="images"
+            app:lottie_loop="true"
+            app:mutableVisibility="@{data.getLoadingVisibility()}" />
+
+    </RelativeLayout>
+
+</layout>
